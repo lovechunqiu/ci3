@@ -396,8 +396,9 @@ if ( ! is_php('5.4'))
  */
 
 	$e404 = FALSE;
-	$class = ucfirst($RTR->class);
-	$method = $RTR->method;
+    $class = empty($RTR->class) ? $RTR->default_controller : $RTR->class;
+    $class = strtolower($class);
+	$method = strtolower($RTR->method);
 
 	if (empty($class) OR ! file_exists(APPPATH.'controllers/'.$RTR->directory.$class.'.php'))
 	{
