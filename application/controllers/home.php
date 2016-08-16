@@ -1,18 +1,26 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Home extends MY_Controller {
 
 	public function __construct(){
 		parent::__construct();
-		$this->load->model('user_model');
+        $this->load->vars(array(
+            'css'    => array(
+                'static/css/main.css',
+            ),
+            'script' => array(
+                'static/js/jquery.js',
+            ),
+        ));
+		$this->load->model('muser');
 	}
 	/**
 	 * 初始化参数
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->_return('welcome_message');
 	}
 
 	/**
@@ -23,11 +31,11 @@ class Welcome extends CI_Controller {
 		$data['username'] = $post['username'];
 		$data['password'] = $post['password'];
 		$this->session->set_userdata($data);
-		$result = $this->user_model->insert_entry($data);
+		$result = $this->muser->add($data);
 		if($result){
-			print('注册成功');
+			dump('注册成功');
 		}else{
-			print('注册失败');
+			dump('注册失败');
 		}
 	}
 
