@@ -2,9 +2,9 @@
 
 /**
  * 后台分页
- * @author: lideqiang@cxshiguang.com
+ * @author: lideqiang87@gmail.com
  * @version: 1.0.0
- * @since: 2015-10-26
+ * @since: 2016-09-21
  */
 class Page {
     // 分页栏每页显示的页数
@@ -57,8 +57,8 @@ class Page {
 
     /**
      * 设置参数
-     * @author lideqiang@cxshiguang.com
-     * @date   2015-10-26
+     * @author lideqiang87@gmail.com
+     * @date   2016-09-21
      * @param  [type]     $name  [description]
      * @param  [type]     $value [description]
      */
@@ -70,8 +70,8 @@ class Page {
 
     /**
      * 分页显示输出
-     * @author lideqiang@cxshiguang.com
-     * @date   2015-10-26
+     * @author lideqiang87@gmail.com
+     * @date   2016-09-21
      * @return [type]     [description]
      */
     public function show() {
@@ -149,8 +149,8 @@ class Page {
 
     /**
      * ajax分页
-     * @author lideqiang@cxshiguang.com
-     * @date   2015-10-26
+     * @author lideqiang87@gmail.com
+     * @date   2016-09-21
      * @return [type]     [description]
      */
     public function ajax_show()

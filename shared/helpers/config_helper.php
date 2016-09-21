@@ -1,10 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-/**
- * Created by PhpStorm.
- * User: lideqiang
- * Date: 15/7/28
- * Time: 00:06
- */
+
 
 if ( ! function_exists('C')) {
     // read config

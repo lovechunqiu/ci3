@@ -14,8 +14,8 @@ class MAdmin_auth extends MY_Model{
 
     /**
      * 批量更新
-     * @author lideqiang@cxshiguang.com
-     * @date   2015-10-24
+     * @author lideqiang87@gmial.com
+     * @date   2016-09-21
      * @param  [type]     $idarr [description]
      * @param  [type]     $data  [description]
      * @return [type]            [description]

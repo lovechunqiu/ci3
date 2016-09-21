@@ -2,8 +2,8 @@
 
 /**
  * 重构redis
- * @author lideqiang@cxshiguang.com
- * @since 2016-1-29 19:48:12
+ * @author lideqiang87@gmail.com
+ * @since 2016-09-21 19:48:12
  * @version 1.0.0
  */
 
