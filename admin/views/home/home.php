@@ -91,8 +91,7 @@ function editphone(){
     <!-- Fixed top -->
     <div id="top">
         <div class="fixed">
-            <!-- <a href="<?php echo site_url();?>" title="" class="logo"><img src="<?php echo static_url("static/admin/img/logo.png");?>" alt="" /></a> -->
-            <a href="<?php echo site_url();?>" title="" class="logo">管理后台</a>
+            <a href="<?php echo site_url();?>" title="" class="logo"><img src="<?php echo static_url("static/admin/img/logo.png");?>" alt="" /></a>
             <ul class="top-menu">
                 <li><a class="fullview"></a></li>
                 <li id="refresh_wrapper"><a class="showmenu" title="刷新当前页"></a></li>

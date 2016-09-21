@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-<title>三颗糖后台管理</title>
+<title>后台管理</title>
 <link href="<?php echo static_url('static/admin/css/main.css');?>" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript" src="<?php echo static_url('static/admin/js/plugins/ui/jquery-1.7.1.min.js');?>"></script>
@@ -24,7 +24,7 @@
 	<!-- Fixed top -->
 	<div id="top">
 		<div class="fixed">
-			<!-- <span class="logo"><img src="<?php echo static_url('static/admin/img/logo.png');?>" alt="" /></span> -->
+			<span class="logo"><img src="<?php echo static_url('static/admin/img/logo.png');?>" alt="" /></span>
 			<!-- <ul class="top-menu">
 				<li class="dropdown">
 					<a class="login-top" data-toggle="dropdown"></a>
