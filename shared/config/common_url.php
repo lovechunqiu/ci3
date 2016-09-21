@@ -7,5 +7,5 @@
  */
 
 $config['wap_url']     = 'http://m.ci3.om';
-$config['static_url']  = array('http://ldq.ci3.om'  => 1);
+$config['static_url']  = array('http://www.ci3.om'  => 1);
 
