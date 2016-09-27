@@ -1040,6 +1040,7 @@ class CI_Loader {
 			$subdir = '';
 		}
 
+		$subdir= ucfirst($subdir);
 		$class = ucfirst($class);
 
 		foreach (array(ucfirst($class), strtolower($class)) as $class)
