@@ -3,4 +3,7 @@
 development
 production
 nohup.out
+admin/logs
+application/logs
+api/logs
 admin/cache

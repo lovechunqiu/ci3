@@ -1042,49 +1042,53 @@ class CI_Loader {
 
 		$class = ucfirst($class);
 
-		// Is this a stock library? There are a few special conditions if so ...
-		if (file_exists(BASEPATH.'libraries/'.$subdir.$class.'.php'))
+		foreach (array(ucfirst($class), strtolower($class)) as $class)
 		{
-			return $this->_ci_load_stock_library($class, $subdir, $params, $object_name);
-		}
 
-		// Let's search for the requested library file and load it.
-		foreach ($this->_ci_library_paths as $path)
-		{
-			// BASEPATH has already been checked for
-			if ($path === BASEPATH)
+			// Is this a stock library? There are a few special conditions if so ...
+			if (file_exists(BASEPATH.'libraries/'.$subdir.$class.'.php'))
 			{
-				continue;
+				return $this->_ci_load_stock_library($class, $subdir, $params, $object_name);
 			}
 
-			$filepath = $path.'libraries/'.$subdir.$class.'.php';
-
-			// Safety: Was the class already loaded by a previous call?
-			if (class_exists($class, FALSE))
+			// Let's search for the requested library file and load it.
+			foreach ($this->_ci_library_paths as $path)
 			{
-				// Before we deem this to be a duplicate request, let's see
-				// if a custom object name is being supplied. If so, we'll
-				// return a new instance of the object
-				if ($object_name !== NULL)
+				// BASEPATH has already been checked for
+				if ($path === BASEPATH)
 				{
-					$CI =& get_instance();
-					if ( ! isset($CI->$object_name))
-					{
-						return $this->_ci_init_library($class, '', $params, $object_name);
-					}
+					continue;
 				}
 
-				log_message('debug', $class.' class already loaded. Second attempt ignored.');
-				return;
-			}
-			// Does the file exist? No? Bummer...
-			elseif ( ! file_exists($filepath))
-			{
-				continue;
-			}
+				$filepath = $path.'libraries/'.$subdir.$class.'.php';
 
-			include_once($filepath);
-			return $this->_ci_init_library($class, '', $params, $object_name);
+				// Safety: Was the class already loaded by a previous call?
+				if (class_exists($class, FALSE))
+				{
+					// Before we deem this to be a duplicate request, let's see
+					// if a custom object name is being supplied. If so, we'll
+					// return a new instance of the object
+					if ($object_name !== NULL)
+					{
+						$CI =& get_instance();
+						if ( ! isset($CI->$object_name))
+						{
+							return $this->_ci_init_library($class, '', $params, $object_name);
+						}
+					}
+
+					log_message('debug', $class.' class already loaded. Second attempt ignored.');
+					return;
+				}
+				// Does the file exist? No? Bummer...
+				elseif ( ! file_exists($filepath))
+				{
+					continue;
+				}
+
+				include_once($filepath);
+				return $this->_ci_init_library($class, '', $params, $object_name);
+			}
 		}
 
 		// One last attempt. Maybe the library is in a subdirectory, but it wasn't specified?
