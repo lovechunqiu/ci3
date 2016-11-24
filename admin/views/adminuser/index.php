@@ -36,8 +36,12 @@
         <td><span id="phone_<?php echo $vo['id'];?>"><?php echo $vo['mobile'];?></span></td>
         <td><span id="group_<?php echo $vo['id'];?>"><?php echo $vo['groupname'];?></span></td>
         <td>
-          <a href="javascript:void(0);" onclick="edit_f(<?php echo $vo['id'];?>);">编辑</a> 
-          <a href="javascript:void(0);" onclick="del(<?php echo $vo['id'];?>);">删除</a>  
+          <?php if(get_other_auth('adminuser', 'edit')):?>
+            <a href="javascript:void(0);" onclick="edit_f(<?php echo $vo['id'];?>);">编辑</a> 
+          <?php endif;?>
+          <?php if(get_other_auth('adminuser', 'dodelete')):?>
+            <a href="javascript:void(0);" onclick="del(<?php echo $vo['id'];?>);">删除</a>  
+          <?php endif;?>
         </td>
       </tr>
   <?php endforeach;?>

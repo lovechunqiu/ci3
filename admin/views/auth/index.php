@@ -29,8 +29,12 @@
         <td><?php echo $value['id'];?></td>
         <td><span id="name_<?php echo $value['id'];?>"><?php echo $value['groupname'];?></span></td>
         <td>
+          <?php if(get_other_auth('auth', 'edit')):?>
             <a href="<?php echo site_url('auth/edit?id=' . $value['id']);?>">编辑</a> 
+          <?php endif;?>
+          <?php if(get_other_auth('auth', 'dodelete')):?>
             <a href="javascript:void(0);" onclick="del(<?php echo $value['id'];?>);">删除</a>  
+          <?php endif;?>
         </td>
       </tr>
     <?php endforeach;?>

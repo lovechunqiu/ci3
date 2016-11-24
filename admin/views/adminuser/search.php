@@ -1,7 +1,7 @@
 
 <!-- search-->
 <div id="addAttr_div" style="display:none;">
-<form class="form-horizontal" method="post" action="<?php echo site_url('adminuser/addAdmin');?>" onsubmit="return addNewAdmin();">
+<form class="form-horizontal" method="post" action="<?php echo site_url('adminuser/doedit');?>" onsubmit="return addNewAdmin();">
   <fieldset>
     <div class="row-fluid">
       <div class="navbar">

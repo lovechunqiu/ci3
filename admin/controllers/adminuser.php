@@ -36,7 +36,7 @@ class Adminuser extends MY_Controller {
      * @author lideqiang@cxshiguang.com
      * @date   2015-10-07
      */
-    public function addAdmin(){
+    public function doedit(){
         $post = $this->input->post(NULL, TRUE);
         $url  = site_url('adminuser/index');
         $post['univalent'] = ! empty($post['univalent']) ? $post['univalent'] * 100 : 100;

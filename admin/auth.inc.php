@@ -93,18 +93,8 @@ $auth_inc[$i]['low_leve']['adminuser']= array(
 		'eqaction_dodelete'    => 'at79',
 		'eqaction_header'    => 'at99',
 		'eqaction_memberheaderuplad'    => 'at99',
-		'eqaction_addadmin' =>array(
-			'at78'=>array(//增加
-				'POST'=>array(
-					"uid"=>'G_NOTSET',
-				),
-			),
-			'at80'=>array(//修改
-				'POST'=>array(
-					"uid"=>'G_ISSET',
-				),
-			),
-		),
+		'eqaction_doedit'   => 'at80',
+		'eqaction_edit'   	=> 'at80',
 	)
 );
 
