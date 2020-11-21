@@ -361,6 +361,7 @@ function rmdirr($path) {
             }
         }else{
             $handle = opendir($path);
+            $show = "";
             while (($file = readdir($handle))!='') {
                 if (($file!=".") && ($file!="..") && ($file!="")){
                     if (is_dir("$path/$file")){
